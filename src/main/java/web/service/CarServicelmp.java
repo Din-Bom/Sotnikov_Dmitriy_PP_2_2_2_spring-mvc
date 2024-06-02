@@ -26,7 +26,7 @@ public class CarServicelmp implements CarService {
     @Override
     public List<Car> getCarsByCount(int count) {
         return carList.stream()
-                .limit(count >= 5 ? carList.size() : count)
+                .limit(count)
                 .collect(Collectors.toList());
     }
 }
